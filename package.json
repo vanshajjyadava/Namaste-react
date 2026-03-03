@@ -1,0 +1,32 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "Learning React.js",
+  "homepage": "https://github.com/vanshajjyadava/Namaste-react#readme",
+  "bugs": {
+    "url": "https://github.com/vanshajjyadava/Namaste-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanshajjyadava/Namaste-react.git"
+  },
+  "license": "ISC",
+  "author": "Vansh Yadav",
+  "type": "commonjs",
+  "scripts": {
+    "dev":"parcel index.html",
+    "build":"parcel build index.html",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ]
+}
