@@ -5,7 +5,7 @@
 }
 
 .logo {
-  width: 200px;
+  width: 150px;
 }
 
 .nav-items {
@@ -44,7 +44,7 @@
 }
 
 .res-logo {
-  height: 100px;
+  height: 150px;
   width: 100%;
 }
 
@@ -64,4 +64,23 @@
 .shimmer-container {
   display: flex;
   flex-wrap: wrap;
+}
+
+.login-btn{
+  cursor: pointer;
+  padding: 0 20px;
+  margin: 0 10px;
+}
+
+.filter{
+  display: flex;
+}
+
+.search-bar{
+  padding: 5px;
+}
+
+.search-btn{
+  margin: 10px; 
+  cursor: pointer;
 }

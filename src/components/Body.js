@@ -5,6 +5,8 @@ import Shimmer from "./Shimmer";
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
 
+  const [searchText, setSearchText] = useState("");
+  
   useEffect(() => {
     fetchData();
   }, []);
@@ -17,23 +19,39 @@ const Body = () => {
     console.log(json);
 
     setListOfRestaurants(
+      // Optional Chaining
       json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants || [],
     );
   };
 
-  if(listOfRestaurants.length === 0){
-    return <Shimmer />
-  }
+  // Conditional Rendering
+  // if(listOfRestaurants.length === 0){
+  //   return <Shimmer />
+  // }
 
-  return (
+  // Ternary Operator
+  return listOfRestaurants.length === 0 ? (
+    <Shimmer />
+  ) : (
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input
+            type="text"
+            className="search-bar"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          />
+        </div>
+        <button className="search-btn">Search</button>
         <button
           className="filter-btn"
           onClick={() => {
             const filteredList = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4.5
+              (res) => res.info.avgRating > 4.5,
             );
             setListOfRestaurants(filteredList);
           }}
