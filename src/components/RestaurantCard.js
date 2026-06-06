@@ -1,22 +1,16 @@
 import { CDN_URL } from "../utils/constants";
 
-const getImageUrl = (imageId) => {
-  if (!imageId) return "https://via.placeholder.com/150";
+const getImageUrl = (cloudinaryImageId) => {
+  if (!cloudinaryImageId) return "https://via.placeholder.com/150";
 
-  return CDN_URL + imageId;
+  return CDN_URL + cloudinaryImageId;
 };
 
 const RestaurantCard = (props) => {
   const { resData } = props;
 
-  const {
-    cloudinaryImageId,
-    name,
-    avgRating,
-    cuisines,
-    costForTwo,
-    sla,
-  } = resData?.info || {};
+  const { cloudinaryImageId, name, avgRating, cuisines, costForTwo, sla } =
+    resData?.info || {};
 
   return (
     <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
