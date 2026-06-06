@@ -14,8 +14,8 @@
   "author": "Vansh Yadav",
   "type": "commonjs",
   "scripts": {
-    "dev":"parcel index.html",
-    "build":"parcel build index.html",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "devDependencies": {
@@ -24,7 +24,8 @@
   },
   "dependencies": {
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^6.30.4"
   },
   "browserslist": [
     "last 2 versions"
